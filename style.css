@@ -1,0 +1,419 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700,900');
+
+* {
+    box-sizing: border-box !important;
+    font-family: 'Roboto';
+    font-weight: 400;
+    outline: none;
+}
+
+html, body {
+    margin: 0; padding: 0;
+    background-color: #f1f2f2;
+    overflow: hidden;
+}
+
+a{text-decoration: none;}
+
+.container {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*MENU COMPONENT*/
+header {
+    background-color: #55534f;
+    color: white;
+    display: flex;
+}
+
+header-in {
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex: 3;
+}
+
+header-in>:nth-child(1) {
+    flex: 1;
+}
+
+header-in>:not(:nth-child(1)) {
+    flex: 1;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.logo {
+    flex: 1;
+}
+
+.agencyName {
+    flex: 1;
+}
+
+search {
+    display: flex;
+}
+
+search input {
+    width: 100%;
+    border: 0;
+    padding: .5rem
+}
+
+search button {
+    border: 0;
+    background-color: #358890;
+    color: white;
+    padding: .5rem 1rem;
+}
+
+header-in span {
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: .9rem;
+    margin: 0 5%;
+}
+
+header-in span count {
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+
+/*LABELS*/
+labels {
+    display: flex;
+    max-width: 100%;
+    margin: 2em;
+    padding-left: 1em;
+}
+
+labels button:first-child {
+    margin-left: 0;
+}
+
+labels button {
+    border: 1px solid #358890;
+    color: #358890;
+    background-color: white;
+    margin: 0 .5rem 0 .5rem;
+    font-weight: 700;
+    padding: .5em .5em .6em .5em;
+    min-width: 100px;
+    cursor: pointer;
+}
+
+labels button:hover {
+    background-color: #358890;
+    color: white;
+}
+
+
+/*card-container COMPONENT*/
+
+card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin: 0;
+    width: 100%;
+    height: calc(100vh - 170px);
+    overflow-y: auto;
+}
+
+card-in {
+    display: block;
+    text-align: justify;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 1200px) {
+    card-in {
+        text-align: center;
+    }
+    
+    labels {
+        display: block;
+        text-align: center;
+        padding-left: 0;
+    }
+    
+    labels button {
+        margin-left: 0;
+        margin: 0 .5rem 0 .5rem;
+    }
+}
+
+card {
+    display: inline-block;
+    margin: 1em;
+    width: 180px;
+    max-width: 100%;
+    text-align: center;
+    background-color: white;
+    transition: .4s;
+    cursor: default;
+}
+
+card:hover {
+    box-shadow: 0 0 10px rgba(0,0,0,.2);
+}
+
+card p:nth-child(1) {
+    border-bottom: 1px solid #ccc;
+    padding: .5em 0;
+    color: #939598;
+    font-weight: 300;
+    margin: .5em 0;
+}
+
+card p:nth-child(2) {
+    font-weight: 700;
+    color: #939598;
+    margin: .5em 0 1em 0;
+}
+
+card picture {
+    display: block;
+    height: 120px;
+    width: 100%;
+    background: white url('./perfil.png') center/cover no-repeat;
+}
+
+card description {
+    position: relative;
+    display: block;
+    margin: 0 .5em;
+}
+
+card description:before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 0;
+    width: 0;
+    height: 0;
+    
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 15px solid white;
+}
+
+card social-links {
+    background-color: #f8f8f8;
+    padding: .5em 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+card social-links span {
+    border-radius: 50%;
+    color: white;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.facebook {background-color: #3b5998;}
+.linkedin {background-color: #0173b2;}
+.instagram {background-color: #d61b4b;}
+
+.newEmployee {
+    margin: 0;
+    padding: 0;
+    padding-top: .24em;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.newEmployee i {
+    font-size: 5em;
+}
+
+.newEmployee picture {
+    height: 170px;
+}
+
+.newEmployee p:nth-child(2) {
+    margin-bottom: .8em;
+}
+
+.main-contents {
+    display: flex;
+    height: calc(100vh - 64px);
+}
+
+.cards {
+    flex-shrink: 0;
+    flex-grow: 0;
+    flex: 3;
+}
+
+.location {
+    flex: 1;
+}
+
+.agencyName {
+    background-color: palevioletred;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*LISTS COMPONENT*/
+.lists {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.lists-header {
+    text-align: left;
+    background-color: white;
+    background: url('pins.png') right bottom no-repeat, linear-gradient(180deg, #fff, #f7f7f7);
+}
+
+.lists-header h2 {
+    margin: 0;
+    padding: .7em 0 .7em 1em;
+    color: #464646;
+    font-weight: 200;
+    font-size: 2em;
+}
+
+ul, li {
+    text-decoration: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+.lists-agencies {
+    flex: 1;
+    background-color: red;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.lists-agencies li {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1em 1em;
+    cursor: pointer;
+}
+
+
+.lists-agencies li:hover {
+    background-color: #fafafa;
+}
+
+.lists-agencies li:active {
+    background-color: #eee;
+}
+
+.initial-letter {
+    margin: 0 1em;
+    width: 35px;
+    height: 35px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    font-size: 1.2em;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-flow: 0;
+}
+
+.item-agency {
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+    padding: 1em;
+    margin-right: 1em;
+    color: #464646;
+}
+
+.addNewAgency {
+    color: white;
+    background-color: #00aeef;
+    text-align: center;
+    padding: .5em 0;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 -1px 8px rgba(0,0,0,.2);
+}
+
+.addNewAgency:hover {
+    background-color: #00b4f7;
+}
+
+.addNewAgency i {
+    background-color: white;
+    color: #00aeef;
+    border-radius: 50%;
+    margin: 0 1em;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading {
+    margin: 0 1em;
+}
+
+.loading > div {
+    margin: 1em auto 1em 0;
+    padding: .5em 0;
+    height: 10px;
+    background-color: #ccc;
+    border: 3px solid #ccc;
+}
+
+.loading > div:nth-child(1) {
+    animation: bar 2s infinite linear;
+}
+
+.loading > div:nth-child(2) {
+    animation: bar 3s infinite linear;
+}
+
+.loading > div:nth-child(3) {
+    animation: bar 4s infinite linear;
+}
+
+
+@keyframes bar {
+    from {width: 0%; border: 3px solid #ccc;}
+    to {width: 100%; border: 3px solid #999;}
+}

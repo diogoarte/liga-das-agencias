@@ -1,0 +1,155 @@
+<html>
+    <head>
+        <title>AFinder</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://use.fontawesome.com/db6d98345e.js"></script>
+    </head>
+    <body>
+        <main>
+            <header>
+              <div class="logo">
+                  
+              </div>
+               <header-in>
+                    <nav>
+                        <search>
+                            <input type="text" placeholder="Buscar profissional">
+                            <button><i class="fa fa-fw fa-search"></i></button>
+                        </search>
+                    </nav>
+                    <counter>
+                        <span><count>500</count> usuários</span>
+                        <span><count>100</count> agências</span>
+                    </counter>
+               </header-in>
+               <div class="agencyName">
+                   <p>propeg</p>
+               </div>
+            </header>        
+            <section class="main-contents">
+                <div class="lists">
+                    <div class="lists-header">
+                        <h2>Agências</h2>
+                    </div>
+                    <ul class="lists-agencies">
+                        <li>
+                            <div class="initial-letter">C</div>
+                            <div class="item-agency">Calia</div>
+                        </li>
+                        <li>
+                            <div class="initial-letter">C</div>
+                            <div class="item-agency">Calia</div>
+                        </li>
+                        <li>
+                            <div class="initial-letter">C</div>
+                            <div class="item-agency">Calia</div>
+                        </li>
+                        <li>
+                            <div class="initial-letter">C</div>
+                            <div class="item-agency">Calia</div>
+                        </li>
+                        <li>
+                            <div class="initial-letter">C</div>
+                            <div class="item-agency">Calia</div>
+                        </li>
+                        <li>
+                            <div class="initial-letter">C</div>
+                            <div class="item-agency">Calia</div>
+                        </li>
+                        <li>
+                            <div class="initial-letter">C</div>
+                            <div class="item-agency">Calia</div>
+                        </li>
+                        <li>
+                            <div class="initial-letter">C</div>
+                            <div class="item-agency">Calia</div>
+                        </li>
+                        <li>
+                            <div class="initial-letter">C</div>
+                            <div class="item-agency">Calia</div>
+                        </li>
+                        <li>
+                            <div class="initial-letter">C</div>
+                            <div class="item-agency">Calia</div>
+                        </li>
+                        <li>
+                            <div class="initial-letter">C</div>
+                            <div class="item-agency">Calia</div>
+                        </li>
+                        <li>
+                            <div class="initial-letter">C</div>
+                            <div class="item-agency">Calia</div>
+                        </li>
+                        <li>
+                            <div class="initial-letter">C</div>
+                            <div class="item-agency">Calia</div>
+                        </li>
+                        <li>
+                            <div class="initial-letter">C</div>
+                            <div class="item-agency">Calia</div>
+                        </li>
+                        <li>
+                            <div class="initial-letter">C</div>
+                            <div class="item-agency">Calia</div>
+                        </li>
+                    </ul>
+                    <div class="addNewAgency">Adicionar agência <i class="fa fa-fw fa-plus"></i></div>
+                </div>
+                <div class="cards">
+                    <div class="loading">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                    </div>
+                    <labels class="container">
+                        <button>Atendimento</button>
+                        <button>Produção</button>
+                        <button>Mídia</button>
+                        <button>Criação</button>
+                    </labels>
+
+                    <card-container class="container">
+                       <card-in>
+                            <card>
+                                <picture></picture>
+                                <description>
+                                    <p>Diogo Silva</p>
+                                    <p>Diretor de Arte</p>
+                                </description>
+                                <social-links>
+                                    <a href="#" target="_blank"><span class="facebook"><i class="fa fa-fw fa-facebook"></i></span></a>
+                                    <a href="#" target="_blank"><span class="linkedin"><i class="fa fa-fw fa-linkedin"></i></span></a>
+                                    <a href="#" target="_blank"><span class="instagram"><i class="fa fa-fw fa-instagram"></i></span></a>
+                                </social-links>
+                            </card>
+                            
+                            <card class="newEmployee">
+                                <picture>
+                                    <i class="fa fa-fw fa-plus"></i>
+                                </picture>
+                                <p>Adicione um novo funcionário para esta agência.</p>
+                            </card>
+                       </card-in>
+                    </card-container>
+
+                </div>
+                <div id="map" class="location">
+                </div>
+            </section>
+        </main>
+        <script>
+          function initMap() {
+            var uluru = {lat: -25.363, lng: 131.044};
+            var map = new google.maps.Map(document.getElementById('map'), {
+              zoom: 4,
+              center: uluru
+            });
+            var marker = new google.maps.Marker({
+              position: uluru,
+              map: map
+            });
+          }
+        </script> 
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBWs3Ov8tc303X_PvEgfT5kk7J0SQ9RikU&callback=initMap"></script>
+    </body>
+</html>
